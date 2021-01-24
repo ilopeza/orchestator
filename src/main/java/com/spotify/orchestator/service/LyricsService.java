@@ -58,7 +58,7 @@ public class LyricsService {
         return musicInfoClientBuilder.build()
                 .get()
                 .uri(uriBuilder -> {
-                    uriBuilder = uriBuilder.path("/api/search/lyrics")
+                    uriBuilder = uriBuilder.path("/api/search/lyrics/extract")
                             .queryParam("artist_name", artistName)
                             .queryParam("track_name", currentPlayingItem.getName());
                     if (isNotBlank(albumName)) {
